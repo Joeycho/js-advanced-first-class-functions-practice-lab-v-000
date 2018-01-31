@@ -18,5 +18,4 @@ function driversByRevenue(drivers){
   orddrivers.slice().sort(function(dr1,dr2){
     return dr1['revenue'] - dr2['revenue'];
   });
-  return orddrivers;
 }
