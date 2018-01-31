@@ -29,10 +29,13 @@ function totalRevenue(drivers){
   const reduceTotalRevenue = function(agg,el,i,arr){
     return agg+el.revenue;
   }
-  
+
   return drivers.reduce(reduceTotalRevenue,0)
 }
 
 function averageRevenue(drivers){
-  
+  const reduceAverageRevenue = function(agg,el,i,arr){
+    return (agg+el.revenue)/i+1
+  }
+  return drivers.reduce(reduceAverageRevenue,0)
 }
