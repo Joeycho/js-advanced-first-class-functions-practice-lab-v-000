@@ -24,3 +24,15 @@ function driversByName(drivers){
     return dr1['name'].localeCompare(dr2['name'])
   })
 }
+
+function totalRevenue(drivers){
+  const reduceTotalRevenue = function(agg,el,i,arr){
+    return agg+el.revenue;
+  }
+  
+  return drivers.reduce(reduceTotalRevenue,0)
+}
+
+function averageRevenue(drivers){
+  
+}
