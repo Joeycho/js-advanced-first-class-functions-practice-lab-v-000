@@ -18,3 +18,9 @@ function driversByRevenue(drivers){
     return dr1['revenue'] - dr2['revenue'];
   });
 }
+
+function driversByName(drivers){
+  return drivers.slice().sort(function(dr1,dr2){
+    return dr1['name'].localeCompare(dr2['name'])
+  })
+}
